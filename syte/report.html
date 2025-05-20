@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Хабарлама - Жемқорлықсыз Құрылыс</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Жемқорлықсыз Құрылыс</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Басты бет</a></li>
+          <li class="nav-item"><a class="nav-link" href="map.html">Карта</a></li>
+          <li class="nav-item"><a class="nav-link active" href="report.html">Хабарлама</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Байланыс</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="container my-5">
+    <h2 class="mb-4">Жемқорлық фактісін хабарлау</h2>
+    <form class="card p-4 shadow">
+      <div class="mb-3">
+        <label for="name" class="form-label">Аты-жөніңіз</label>
+        <input type="text" class="form-control" id="name" placeholder="Аты-жөніңізді енгізіңіз">
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Нысанның орналасқан жері</label>
+        <input type="text" class="form-control" id="location" placeholder="Мысалы: Астана, 5-ықшам аудан">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Мәліметтер</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Қосымша ақпаратты жазыңыз"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Жіберу</button>
+    </form>
+    <script>
+      document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Нақты жіберуді болдырмау
+        alert("Рақмет! Хабарламаңыз қабылданды.");
+        this.reset(); // Форманы тазалау
+      });
+    </script>
+    
+  </main>
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 Жемқорлықсыз Құрылыс. Барлық құқықтар қорғалған.</p>
+  </footer>
+</body>
+</html>
